@@ -738,6 +738,9 @@ img {
 .modal-close-btn:hover .close-icon {
   fill: var(--active-color);
 }
+.modal-close-btn:focus .close-icon {
+  fill: var(--active-color);
+}
 .is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -817,6 +820,9 @@ img {
   background-image: url(../image/index/check-on.svg);
 }
 .input-check:hover + .check-text::before {
+  border-color: var(--active-color);
+}
+.input-check:focus + .check-text::before {
   border-color: var(--active-color);
 }
 
