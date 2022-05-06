@@ -221,7 +221,6 @@ img {
 }
 .hero-btn:hover {
   background: #1c79c5;
-  color: #d5e400;
 }
 
 /*==========================++++++POSITIVE++++++==========================*/
@@ -428,11 +427,11 @@ img {
 }
 
 /*==========================++++++FOOTER++++++==========================*/
-/*==========================++++++FOOTER++++++==========================*//*==========================++++++FOOTER++++++==========================*/
+/*==========================++++++FOOTER++++++==========================*/ /*==========================++++++FOOTER++++++==========================*/
 
-/*==========================++++++FOOTER++++++==========================*//*==========================++++++FOOTER++++++==========================*/
+/*==========================++++++FOOTER++++++==========================*/ /*==========================++++++FOOTER++++++==========================*/
 
-/*==========================++++++FOOTER++++++==========================*//*==========================++++++FOOTER++++++==========================*/
+/*==========================++++++FOOTER++++++==========================*/ /*==========================++++++FOOTER++++++==========================*/
 
 .footer {
   background-color: var(--bg-hero-color);
@@ -536,18 +535,24 @@ img {
   fill: #ffffff;
 }
 .footer-input {
-width: 358px;
-height: 50px;
-border: 1px solid rgba(255, 255, 255, 0.3);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-border-radius: 4px;
-background: transparent;
-padding-left: 15px;
-color: #afb1b8;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: transparent;
+  padding-left: 15px;
+  color: #afb1b8;
+  outline-style: none;
+}
+.footer-input:focus {
+  border-color: var(--active-color);
 }
 .sub-button {
-  width: 200px;
-  height: 50px;
+  padding-left: 29px;
+  padding-right: 29px;
+  padding-top: 7px;
+  padding-bottom: 10px;
   background: #188ce8;
   border-radius: 4px;
   font-weight: 700;
@@ -563,7 +568,6 @@ color: #afb1b8;
 }
 .sub-button:hover {
   background: #1c79c5;
-  
 }
 .footer-sub-icon {
   margin-left: 10px;
@@ -716,6 +720,7 @@ color: #afb1b8;
 }
 .close-icon {
   fill: black;
+  transition: fill 500ms;
 }
 .modal-close-btn {
   position: absolute;
@@ -729,6 +734,9 @@ color: #afb1b8;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.modal-close-btn:hover .close-icon {
+  fill: var(--active-color);
 }
 .is-hidden {
   opacity: 0;
@@ -766,6 +774,14 @@ color: #afb1b8;
 .modal-input:focus + .input-icon {
   fill: var(--active-color);
 }
+.modal-input:hover {
+  border: 1px solid var(--active-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 4px;
+}
+.modal-input:hover + .input-icon {
+  fill: var(--active-color);
+}
 .modal-input-wrap {
   position: relative;
 }
@@ -800,14 +816,22 @@ color: #afb1b8;
 }
 .modal-text:focus {
   border: 1px solid var(--active-color);
-  box-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 4px;
+}
+.modal-text:hover {
+  border: 1px solid var(--active-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
 }
 .input-check:checked + .check-text::before {
-  /* background-color: #ffffff; */
   border: none;
   background-image: url(../image/index/check-on.svg);
 }
+.input-check:hover + .check-text::before {
+  border-color: var(--active-color);
+}
+
 .check-text {
   font-weight: 400;
   font-size: 14px;
@@ -827,6 +851,14 @@ color: #afb1b8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-right: 8px;
   margin-left: 12px;
+  transition: border-color 300ms;
+}
+/* .check-text:hover::before {
+  border-color: var(--active-color);
+} */
+.licence {
+  text-decoration: underline;
+  color: var(--active-color);
 }
 .send-btn {
   width: 200px;
@@ -847,4 +879,9 @@ color: #afb1b8;
 }
 .send-btn:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #1c79c5;
+}
+.send-btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #1c79c5;
 }
